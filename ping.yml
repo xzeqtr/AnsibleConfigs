@@ -1,0 +1,15 @@
+---
+- name: Проверка доступности хостов
+  hosts: all
+  become: false
+  tasks:
+    - name: Ping всех
+      ping:
+
+    - name: Показать Uptime
+      command: uptime
+      register: result
+
+    - name: Вывести Uptime
+      debug:
+        var: result.stdout
