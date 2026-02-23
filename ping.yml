@@ -1,6 +1,6 @@
 ---
 - name: Проверка доступности хостов
-  hosts: all
+  hosts: pihole_group
   become: false
   tasks:
     - name: Ping всех
